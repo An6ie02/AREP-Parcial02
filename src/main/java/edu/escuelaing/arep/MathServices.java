@@ -62,6 +62,9 @@ public class MathServices {
      * not in the list
      */
     public static int binarySearch(int[] numbers, int numberSearch, int initial, int end) {
+        if (initial > end) {
+            return -1;
+        }
         int middle = initial + (end - initial) / 2;
         if (numbers[middle] == numberSearch) {
             return middle;
