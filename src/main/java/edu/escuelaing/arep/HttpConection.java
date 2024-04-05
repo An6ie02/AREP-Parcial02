@@ -10,7 +10,8 @@ public class HttpConection {
 
     private static final String USER_AGENT = "Mozilla/5.0";
     private static int serverIndex = 0;
-    private static final String[] SERVERS = new String[] { "http://54.242.20.242:4568/", "http://52.73.39.133:4568/"};
+    private static final String[] SERVERS = new String[] { "http://localhost:4568/", "http://localhost:4568/"};
+    //private static final String[] SERVERS = new String[] { "http://54.242.20.242:4568/", "http://52.73.39.133:4568/"};
 
     public static String invoke(String operation, String list, String value) throws IOException {
         String GET_URL = SERVERS[serverIndex] + operation + "?numbers=" + list + "&number=" + value;
